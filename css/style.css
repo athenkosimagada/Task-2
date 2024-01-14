@@ -38,9 +38,6 @@ a {
 
 body {
     background-color: var(--bg-clr);
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 5%;
     overflow-x: hidden;
 }
 
@@ -106,6 +103,12 @@ p {
     font-size: 0.875rem;
 }
 
+.max-width {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
 /* Navbar CSS*/
 
 .navbar {
@@ -129,6 +132,12 @@ nav {
 nav > * {
     font-weight: 700;
     font-family: var(--ff-body);
+
+    transition: all .3s ease;
+}
+
+nav > *:hover {
+    color: var(--primary-clr-300);
 }
 
 .navbar img {
@@ -373,6 +382,7 @@ nav > * {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    padding-top: 4rem;
 }
 
 .jobs {
@@ -391,4 +401,210 @@ nav > * {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .jobs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.125rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .jobs {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2.125rem;
+    }
+}
+
+
+/* Hightlight Section */
+
+.highlight-section{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-top: 4rem;
+}
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.hightlight {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: var(--primary-clr-100);
+}
+
+.hightlight img {
+    min-width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.load-more {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-load {
+    display: flex;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--primary-clr-200);
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1.5rem;
+
+    transition: all .3s ease;
+}
+
+.btn-load > svg {
+    margin-left: 0.875rem;
+    font-family: var(--ff-body);
+}
+
+.btn-load:hover {
+    color: var(--acent-clr);
+}
+
+.over-message {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .highlights {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .highlights {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Initiative section */
+
+.initiative-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-top: 4rem;
+}
+
+.over-message2 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.initiatives {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 1rem;
+}
+
+.initiative {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    padding: 1rem;
+    border-radius: 12px;
+    background-color: var(--primary-clr-100);
+}
+
+.initiative img {
+    min-width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .initiatives {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .initiatives {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* Contact Section */
+
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-top: 4rem;
+}
+
+.contact-content {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.contact-content .left2 {
+    flex: 1;
+}
+
+.contact-content .right2 {
+    flex: 1;
+}
+
+.contact-content img {
+    min-width: 100%;
+    min-height: 100%;
+
+    max-width: 190px;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Footer section*/
+
+.footer-section {
+    margin-top: 4rem;
+    background-color: var(--primary-clr-100);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 1.5rem;
+}
+
+.footer-section .privacy {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.footer p {
+    font-weight: 700;
 }
