@@ -76,6 +76,10 @@ p {
     font-family: var(--ff-body);
 }
 
+img {
+    display: block;
+}
+
 /* Shared CSS */
 
 .accent {
@@ -123,6 +127,11 @@ p {
     align-items: center;
 
     position: sticky;
+    top: 1rem;
+    z-index: 999999;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 90%;
 }
 
 nav {
