@@ -13,7 +13,7 @@ let obsever = new IntersectionObserver((entries, observer) => {
             observer.unobserve(image);
         }
     });
-}, imageOptions)
+}, imageOptions);
 
 images.forEach(image => {
     if(image.getAttribute('data-src')) {

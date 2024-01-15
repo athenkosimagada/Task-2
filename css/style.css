@@ -329,6 +329,17 @@ nav > *:hover {
     object-position: center;
 }
 
+.event-details {
+    font-family: var(--ff-heading);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.875rem;
+    padding: 0.5rem;
+    border-radius: 12px;
+    background-color: var(--primary-clr-100);
+}
+
 @media screen and (max-width: 1024px) {
     .hero-section {
         min-height: 668px;
@@ -756,7 +767,7 @@ nav > *:hover {
     .gallery {
         animation: float 4s infinite alternate;
     }
-    
+
     @keyframes transitionIn {
         from {
             opacity: 0;
