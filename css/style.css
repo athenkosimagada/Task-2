@@ -22,6 +22,7 @@
 /* CSS Reset */
 html {
     font-size: 18px;
+    scroll-behavior: smooth;
 }
 
 *,*::after,*::before {
@@ -42,22 +43,22 @@ body {
 }
 
 h1 {
-    font-size: 2.375rem;
+    font-size: 2.375em;
 }
 h2 {
-    font-size: 1.875rem;
+    font-size: 1.875em;
     text-align: center;
     max-width: 65%;
     margin: 0 auto;
 }
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 h4 {
-    font-size: 1.25rem;
+    font-size: 1.25em;
 }
 h4 {
-    font-size: 1.125rem;
+    font-size: 1.125em;
 }
 
 h1,
@@ -148,6 +149,12 @@ nav > *:hover {
     display: none;
 }
 
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+}
+
 @media screen and (max-width: 900px) {
     nav {
         display: none;
@@ -166,16 +173,22 @@ nav > *:hover {
         height: 40px;
         cursor: pointer;
     }
-}
 
-@media screen and (max-width: 1024px) {
-    html {
-        font-size: 16px;
+    h2 {
+        max-width: 95%;
+        font-size: 1.5em;
     }
 }
+
 @media screen and (max-width: 768px) {
     html {
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    html {
+        font-size: 12px;
     }
 }
 
@@ -417,6 +430,12 @@ nav > *:hover {
         grid-template-columns: repeat(1, 1fr);
         gap: 2.125rem;
     }
+
+    .job {
+        padding: 0 10%;
+        text-align: center;
+        align-items: center;
+    }
 }
 
 
@@ -565,7 +584,6 @@ nav > *:hover {
 .contact-content {
     display: flex;
     gap: 1rem;
-    flex-wrap: wrap;
 }
 
 .contact-content .left2 {
@@ -582,8 +600,57 @@ nav > *:hover {
 
     max-width: 190px;
     border-radius: 12px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.row {
+    display: flex;
+    align-items: center; 
+    gap: 1rem;
+}
+
+.row .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-clr-100);
+    padding: 0.875rem;
+    border-radius: 12px;
+    color: var(--primary-clr-300);
+}
+
+@media screen and (max-width: 900px) {
+    .contact-content {
+        flex-direction: column;
+        gap: 3.125rem;
+    }
+
+    .contact-content h4 {
+        text-align: center;
+    }
+    .contact-content .left2 > p {
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .right2 {
+        width: 70%;
+        margin: 0 auto;
+    }
+
 }
 
 /* Footer section*/
@@ -607,4 +674,16 @@ nav > *:hover {
 
 .footer p {
     font-weight: 700;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-section .privacy {
+        justify-content: center;
+    }
 }

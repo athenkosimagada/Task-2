@@ -153,7 +153,7 @@ function loadHighlights(count) {
       highlightDiv.classList.add('hightlight');
 
       highlightDiv.innerHTML = `
-        <img src="${highlight.imgSrc}" alt="" />
+        <img src="${highlight.imgSrc}" alt="${highlight.title}" loading="lazy"/>
         <h4>${highlight.title}</h4>
         <p>${highlight.description}</p>
       `;
@@ -186,7 +186,7 @@ function loadMoreHighlights() {
         highlightDiv.classList.add('hightlight');
   
         highlightDiv.innerHTML = `
-          <img src="${highlight.imgSrc}" alt="" />
+          <img src="${highlight.imgSrc}" alt="${highlight.title}" loading="lazy"/>
           <h4>${highlight.title}</h4>
           <p>${highlight.description}</p>
         `;
@@ -221,7 +221,7 @@ function loadInitiatives(count) {
       initiativeDiv.classList.add('initiative');
 
       initiativeDiv.innerHTML = `
-        <img src="${initiative.imgSrc}" alt="" />
+        <img src="${initiative.imgSrc}" alt="${initiative.title}" loading="lazy"/>
         <h4>${initiative.title}</h4>
         <p>${initiative.description}</p>
       `;
@@ -254,7 +254,7 @@ function loadMoreInitiatives() {
         initiativeDiv.classList.add('initiative');
   
         initiativeDiv.innerHTML = `
-          <img src="${initiative.imgSrc}" alt="" />
+          <img src="${initiative.imgSrc}" alt="${initiative.title}" loading="lazy"/>
           <h4>${initiative.title}</h4>
           <p>${initiative.description}</p>
         `;
